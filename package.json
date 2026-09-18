@@ -1,0 +1,35 @@
+{
+  "name": "gofrench-quiz",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:ui": "vite",
+    "build:ui": "vite build",
+    "deploy": "wrangler deploy",
+    "deploy:ui": "vite build && wrangler pages deploy ui/dist --project-name gofrench-quiz-ui",
+    "test": "vitest run",
+    "test:api": "vitest run tests/api",
+    "test:ui": "playwright test",
+    "test:all": "vitest run && playwright test",
+    "type-check": "tsc --noEmit && tsc --project tsconfig.ui.json --noEmit && tsc --project tsconfig.playwright.json --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.5.0",
+    "@cloudflare/workers-types": "^4.20240924.0",
+    "@playwright/test": "^1.47.0",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "serve": "^14.2.3",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.6",
+    "vitest": "^2.1.1",
+    "wrangler": "^3.78.7"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
+  }
+}

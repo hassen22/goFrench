@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.wrangler/
+
+# Build output
+dist/
+
+# Environment files
+.env
+.dev.vars
+
+# Test artifacts
+test-results/
+playwright-report/
+
+# OS
+.DS_Store

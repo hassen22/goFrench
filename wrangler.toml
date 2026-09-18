@@ -1,0 +1,8 @@
+name = "gofrench-quiz"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare AI binding — free tier, no API key required
+[ai]
+binding = "AI"
